@@ -22,8 +22,9 @@ variables:
  
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
-  
-stages:
+  script: dotnet build --configuration $(buildConfiguration)
+
+stages: 
 - stage: Archive
   displayName: Archive stage
   jobs:  
